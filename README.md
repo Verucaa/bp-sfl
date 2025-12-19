@@ -36,12 +36,16 @@ Website menggunakan API dari `fgsi.dpdns.org`. Anda dapat:
 
 ## 📁 Struktur File
 
+```
+
 project/
 ├──index.html          # File utama HTML
 ├──style.css          # Styling CSS
 ├──script.js          # Main JavaScript
 ├──api.js             # API handler
 └──README.md          # Dokumentasi
+
+```
 
 ## 👨‍💻 Developer
 
