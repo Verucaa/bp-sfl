@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔗 SkipLink - Bypass Safelinku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔗</text></svg>">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-link"></i>
+                <h1>SkipLink<span class="accent">.tech</span></h1>
+            </div>
+            <div class="tagline">Bypass TUTWURI & SFL in seconds ⚡</div>
+        </header>
+
+        <!-- Main Card -->
+        <main class="main-card">
+            <div class="card-header">
+                <h2><i class="fas fa-bolt"></i> Bypass Safelinku</h2>
+                <p class="subtitle">Masukkan link safelinku di bawah untuk mendapatkan link asli</p>
+            </div>
+            
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <i class="fas fa-link input-icon"></i>
+                    <input type="url" id="urlInput" placeholder="https://sfl.gl/xxxx atau https://safelinkku.com/xxxx">
+                    <button id="pasteBtn" class="btn-paste">
+                        <i class="fas fa-paste"></i> Paste
+                    </button>
+                </div>
+                
+                <div class="api-key-section">
+                    <div class="toggle-key">
+                        <span><i class="fas fa-key"></i> API Key (Opsional)</span>
+                        <button id="toggleKeyBtn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="key-input-wrapper" id="keyInputWrapper">
+                        <input type="text" id="apiKeyInput" placeholder="fgsiapi-xxxx (kosongkan untuk menggunakan default)">
+                        <small>API Key dari <a href="https://fgsi.dpdns.org" target="_blank">fgsi.dpdns.org</a></small>
+                    </div>
+                </div>
+                
+                <button id="bypassBtn" class="btn-bypass">
+                    <i class="fas fa-rocket"></i> Bypass Link
+                    <div class="loader" id="loader"></div>
+                </button>
+                
+                <div class="tips">
+                    <i class="fas fa-lightbulb"></i> Tips: Gunakan link yang berawalan https://sfl.gl/!
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection">
+                <h3><i class="fas fa-history"></i> Hasil Bypass</h3>
+                <div class="result-box">
+                    <div class="result-item">
+                        <span class="result-label">🔗 Link Asli:</span>
+                        <div class="result-url" id="originalUrl">-</div>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">🚀 Hasil Bypass:</span>
+                        <div class="result-url" id="bypassedUrl">-</div>
+                    </div>
+                    <div class="result-actions">
+                        <button id="copyBtn" class="btn-action">
+                            <i class="far fa-copy"></i> Copy Link
+                        </button>
+                        <button id="openBtn" class="btn-action">
+                            <i class="fas fa-external-link-alt"></i> Buka Link
+                        </button>
+                        <button id="resetBtn" class="btn-action">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- History -->
+                <div class="history-section">
+                    <div class="history-header">
+                        <h4><i class="fas fa-clock-rotate-left"></i> Riwayat</h4>
+                        <button id="clearHistoryBtn">
+                            <i class="fas fa-trash"></i> Hapus
+                        </button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <!-- History items will be added here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Info Cards -->
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Aman & Cepat</h3>
+                <p>Proses bypass langsung tanpa melalui pihak ketiga yang mencurigakan</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Super Cepat</h3>
+                <p>Proses bypass hanya membutuhkan waktu beberapa detik saja</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsif</h3>
+                <p>Dapat diakses dari berbagai perangkat termasuk smartphone</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="creator-info">
+                    <h4><i class="fas fa-code"></i> Creator: Verucaa</h4>
+                    <p>API: <a href="https://fgsi.dpdns.org" target="_blank">fgsi.dpdns.org</a></p>
+                </div>
+                
+                <div class="channels">
+                    <h4><i class="fab fa-whatsapp"></i> WhatsApp Channels:</h4>
+                    <div class="channel-links">
+                        <a href="https://whatsapp.com/channel/-" target="_blank">
+                            <i class="fas fa-link"></i> Channel Utama
+                        </a>
+                        <a href="https://whatsapp.com/channel/-" target="_blank">
+                            <i class="fas fa-link"></i> Channel Kedua
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2024 SkipLink.tech • Made with <i class="fas fa-heart" style="color: #ff4757;"></i> by Gen Z Dev</p>
+                    <p class="version">v1.0.0 • <span id="requestCount">0</span> links bypassed</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Link berhasil dicopy!</span>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
